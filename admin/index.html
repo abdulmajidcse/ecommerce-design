@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin</title>
+	<link rel="shortcut icon" type="image/png" href="../uploads/brand.png">
+	<!--bootstrap css link-->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<!--custom css link-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--fontawesome css link-->
+	<link rel="stylesheet" type="text/css" href="../fontawesome/css/all.css">
+</head>
+<body>
+
+
+<!--main navbar-->
+<nav class="navbar navbar-expand-lg p-lg-0 p-2 sticky-top mainnavbar">
+  <div class="container-fluid">
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+	    <span class="text-light"><i class="fas fa-bars"></i> Menu</span>
+	  </button>
+	  <div class="collapse navbar-collapse" id="navbarNav">
+	    <ul class="navbar-nav mainnavul">
+	      <!--dropdown link-->
+		  <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	         <i class="fas fa-home"></i> Website Title
+	        </a>
+	        <!--dropdown menu-->
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="#"><i class="fas fa-eye h6"></i> Visit Website</a>
+	        </div><!--end of dropdown menu-->
+	       </li>
+	      <!--dropdown link-->
+		  <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	         <i class="fas fa-user"></i> Admin
+	        </a>
+	        <!--dropdown menu-->
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	          <a class="dropdown-item" href="#"><i class="fas fa-unlock-alt"></i> Change Password</a>
+	          <a class="dropdown-item" href="#"><i class="far fa-address-card"></i> Profile</a>
+	          <a onclick="return confirm('Are you sure to signout?')"  class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i>Signout</a>
+	        </div><!--end of dropdown menu-->
+	       </li>
+	    </ul>
+
+	  </div>
+  </div>
+</nav><!--end of main navbar-->
+
+<!--main body section-->
+<section>
+	<!--main body conatiner-->
+	<div class="container-fluid">
+		<!--main body row-->
+		<div class="row">
+			
+			<!--leftbar col div-->
+			<div class="col-md-2 col-12 border">
+				<div style="overflow: auto;height: 90vh;">
+					<!--categories-->
+					<aside class="ml-1 mb-5 mt-2 sidebar">
+						<ul id="accordionleftbar" class="list-group accordion">
+
+							<li class="list-group-item font-weight-bold"><a href="#"><i class="fas fa-tachometer-alt h6"></i> Dashboard</a></li>
+
+							<li class="list-group-item font-weight-bold" id="appearance"  data-toggle="collapse" data-target="#appearancemenu" aria-expanded="true" aria-controls="appearancemenu"><i class="fas fa-tasks h6"></i> Appearance</li>
+
+							<ul id="appearancemenu" class="collapse list-group leftsubmenu" aria-labelledby="appearance" data-parent="#accordionleftbar">
+								<li class="list-group-item"><a href="#"><i class="fas fa-pen-nib"></i> Main Title</a></li>
+								<li class="list-group-item"><a href="#"><i class="fas fa-pencil-alt"></i> Sub Title</a></li>
+								<li class="list-group-item"><a href="#"><i class="fas fa-fan"></i> Social Media</a></li>
+								<li class="list-group-item"><a href="#"><i class="fas fa-copyright"></i> Copyright</a></li>
+							</ul>
+
+							<li class="list-group-item font-weight-bold" id="category"  data-toggle="collapse" data-target="#categorymenu" aria-expanded="true" aria-controls="categorymenu"><i class="fas fa-th h6"></i> Category</li>
+
+							<ul id="categorymenu" class="collapse list-group leftsubmenu" aria-labelledby="category" data-parent="#accordionleftbar">
+								<li class="list-group-item"><a href="#"><i class="fas fa-plus-square"></i> Add Category</a></li>
+								<li class="list-group-item"><a href="#"><i class="far fa-list-alt"></i> Category List</a></li>
+							</ul>
+
+							<li class="list-group-item font-weight-bold" id="posts"  data-toggle="collapse" data-target="#postsmenu" aria-expanded="true" aria-controls="postsmenu"><i class="fas fa-newspaper h6"></i> Posts</li>
+
+							<ul id="postsmenu" class="collapse list-group leftsubmenu" aria-labelledby="posts" data-parent="#accordionleftbar">
+								<li class="list-group-item"><a href="#"><i class="far fa-plus-square"></i> Add Post</a></li>
+								<li class="list-group-item"><a href="#"><i class="fas fa-list-alt"></i> Post List</a></li>
+							</ul>
+
+							<li class="list-group-item font-weight-bold" id="pages"  data-toggle="collapse" data-target="#pagesmenu" aria-expanded="true" aria-controls="pagesmenu"><i class="far fa-comment-alt h6"></i> Pages</li>
+
+							<ul id="pagesmenu" class="collapse list-group leftsubmenu" aria-labelledby="pages" data-parent="#accordionleftbar">
+								<li class="list-group-item"><a href="#"><i class="far fa-calendar-plus"></i> Add Page</a></li>
+								<li class="list-group-item"><a href="#"><i class="far fa-file"></i> Page List</a></li>
+							</ul>
+
+							<li class="list-group-item font-weight-bold" id="users"  data-toggle="collapse" data-target="#usersmenu" aria-expanded="true" aria-controls="usersmenu"><i class="fas fa-users h6"></i> Users</li>
+
+							<ul id="usersmenu" class="collapse list-group leftsubmenu" aria-labelledby="users" data-parent="#accordionleftbar">
+								<li class="list-group-item"><a href="#"><i class="fas fa-user-plus"></i> Add User</a></li>
+								<li class="list-group-item"><a href="#"><i class="far fa-address-card"></i> User List</a></li>
+							</ul>
+						
+							<li class="list-group-item font-weight-bold"><a href="#"><i class="fab fa-facebook-messenger h6"></i> Message <span class="badge badge-danger">9</span></a></li>
+
+							<li class="list-group-item font-weight-bold"><a href="#"><i class="far fa-comment-alt h6"></i> Comments <span class="badge badge-danger">20</span></a></a></li>
+						</ul>
+					</aside><!--end of categories-->
+				</div>
+
+			</div><!--end of rightbar col div-->
+
+			<!--rightbar col div-->
+			<div class="col-md-10 col-12 border">
+				<div style="overflow: auto;height: 92vh;">
+					
+				<!--post article-->
+				<article class="post mr-2 mb-3 mt-2 border-bottom">
+					<h2 class="post_heading"><a href="#" class="text-success">HTML basic lecture part 01</a></h2>
+					<p class="post_meta"><i class="far fa-calendar-alt text-success"></i> February 05, 2019 | <i class="far fa-comment-alt text-success"></i> No Comments | <i class="fas fa-th text-success"></i> <a href="#">HTML</a>, <a href="#">CSS</a> | <i class="fas fa-user text-success"></i> <a href="">Admin</a></p>
+					<a href="#"><img src="../uploads/post1.jpg" class="w-100"></a>
+					<p class="text-justify">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for...  <a href="#" class="d-block float-right"><kbd>See More</kbd></a></p>
+				</article><!--end of post article-->
+
+
+
+				<!--pagination-->
+				<div class="container-fluid" style="overflow: auto;">
+					<a href="#" class="page-link">1</a>
+					<a href="#" class="page-link">2</a>
+					<a href="#" class="page-link">3</a>
+					<a href="#" class="page-link">4</a>
+					<a href="#" class="page-link">5</a>
+				</div><!--end of pagination-->
+
+				<!--footer-->
+				<footer class="footer mt-3 p-4">
+					<div class="container-fluid text-center border-top border-secondary mt-3">
+						<p class="text-white">Copyright &copy; 2019 WEB BLOG</p>
+					</div>
+				</footer><!--end of footer-->
+
+				</div>
+
+
+
+
+			</div><!--end of rightbar col div-->
+		</div><!--end of main body row-->
+	</div><!--end ofmain body conatiner-->
+
+</section><!--end of main body section-->
+
+
+<!--back to top-->
+<button class="btn btn-sm btn-outline-info" onclick="topFunction()" id="backtotop"><i class="fas fa-arrow-alt-circle-up h3"></i></button>
+<!--end of back to top-->
+
+<!--jquery and bootstrap js script-->
+<script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+<!--custom js script-->
+<script type="text/javascript" src="../js/style.js"></script>
+</body>
+</html>
